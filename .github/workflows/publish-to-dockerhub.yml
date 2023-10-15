@@ -1,4 +1,4 @@
-name: Publish Images to DockerHub
+name: Build and Publish Images to DockerHub
 
 on:
   push:
@@ -20,7 +20,9 @@ jobs:
         run: |
           echo "${{ secrets.DOCKERHUB_PASSWORD }}" | docker login -u mattmajestic --password-stdin
 
-      - name: Rocker ~ Build and Push 
-        run: |
-          docker buildx create --use
-          docker buildx build -t mattmajestic/wsop-cashes:latest
+      - name: Build and Push Docker Image
+        uses: docker/build-push-action@v2
+        with:
+          context: .  # Use the current directory as the build context
+          tags: mattmajestic/wsop-cashes:latest
+          push: true
