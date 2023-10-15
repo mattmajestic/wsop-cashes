@@ -20,7 +20,7 @@ jobs:
         run: |
           echo "${{ secrets.DOCKERHUB_PASSWORD }}" | docker login -u mattmajestic --password-stdin
 
-      - name: Ubuntu ~ Build and Push 
+      - name: Rocker ~ Build and Push 
         run: |
           docker buildx create --use
-          docker buildx build -t mattmajestic/wsop-cashes:latest -f Dockerfile . --push
+          docker buildx build -t mattmajestic/wsop-cashes:latest
