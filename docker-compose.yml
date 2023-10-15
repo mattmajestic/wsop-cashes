@@ -1,0 +1,10 @@
+version: '3.9'
+
+services:
+  app:
+    build:
+      context: ./  # Use the current directory as the build context
+      dockerfile: Dockerfile
+    ports:
+      - "3838:3838"  # Expose Shiny's default port
+

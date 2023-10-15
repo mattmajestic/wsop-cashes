@@ -12,9 +12,10 @@ RUN R -e "install.packages('iotools')"
 RUN R -e "install.packages('DT')"
 RUN R -e "install.packages('jsonlite')"
 RUN R -e "install.packages('qrcode')"
+RUN R -e "install.packages('tidyverse')"
 
 # Copy the contents of your app directory to the image
-COPY ./app /srv/shiny-server/app
+COPY ./app.R /srv/shiny-server/wsop_cashes/app.R
 
 # Expose port 3838 to the host
 EXPOSE 3838
