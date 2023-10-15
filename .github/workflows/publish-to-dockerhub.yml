@@ -1,0 +1,26 @@
+name: Publish Images to DockerHub
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout mamba-docker
+        uses: actions/checkout@v2
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+
+      - name: Docker Hub Login
+        run: |
+          echo "${{ secrets.DOCKERHUB_PASSWORD }}" | docker login -u mattmajestic --password-stdin
+
+      - name: Ubuntu ~ Build and Push 
+        run: |
+          docker buildx create --use
+          docker buildx build -t mattmajestic/wsop-cashes:latest -f Dockerfile . --push
