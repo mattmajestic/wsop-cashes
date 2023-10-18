@@ -13,5 +13,9 @@ RUN pip install --trusted-host pypi.python.org -r requirements.txt
 # Make port 8501 available to the world outside this container
 EXPOSE 8501
 
+# Define environment variable
+ENV LC_ALL=C.UTF-8
+ENV LANG=C.UTF-8
+
 # Run the Streamlit app when the container launches
-CMD ["streamlit", "run", "wsop_streamlit.py"]
+CMD ["streamlit", "run", "wsop_streamlit.py --config config.toml"]
