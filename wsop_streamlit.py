@@ -14,8 +14,7 @@ wsop_url = "https://www.wsop.com/players/profile/?playerid="
 
 # Streamlit app
 st.set_page_config(page_title="WSOP Cashes", page_icon="♠️")
-st.title("WSOP Cashes ♠️	♥ ♣ ♦")
-st.header("WSOP Cashes by Player ID")
+st.title("WSOP Cashes 🃏💰 by Player ID")
 st.markdown("♠️	♥ ♣  ♦")
 
 selected_player = st.selectbox("Select WSOP Player", player_data['Name'])

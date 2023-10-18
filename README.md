@@ -6,8 +6,12 @@ Explore World Series of Poker cashes by player ID.
 
 You can pull the Docker image for this project from DockerHub:
 
-### Application Image
+### R Shiny Image
+
 [![Docker Image](https://img.shields.io/docker/v/mattmajestic/wsop-cashes?color=blue&label=mattmajestic/wsop-cashes&logo=docker&logoColor=white&style=for-the-badge)](https://hub.docker.com/r/mattmajestic/wsop-cashes)
+
+### Streamlit Image
+[![Docker Image](https://img.shields.io/docker/v/mattmajestic/wsop-cashes-streamlit?color=blue&label=mattmajestic/wsop-cashes-streamlit&logo=docker&logoColor=white&style=for-the-badge)](https://hub.docker.com/r/mattmajestic/wsop-cashes-streamlit)
 
 ## Subscribe to Our YouTube Channel 📺🃏
 
