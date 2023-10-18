@@ -26,3 +26,11 @@ jobs:
           context: .  # Use the current directory as the build context
           tags: mattmajestic/wsop-cashes:latest
           push: true
+          
+      - name: Build and Push Docker Image for Streamlit
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          file: Dockerfile.streamlit  # Use the Dockerfile.streamlit for this step
+          tags: mattmajestic/wsop-cashes-streamlit:latest
+          push: true
