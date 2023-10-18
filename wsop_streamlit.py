@@ -23,6 +23,7 @@ selected_player = st.selectbox("Select WSOP Player", player_data['Name'])
 player_id = player_data.loc[player_data['Name'] == selected_player, 'ID'].values[0]
 
 if player_id:
+    st.balloons()
     url = wsop_url + str(player_id)
     page = requests.get(url)
     df_list = pd.read_html(page.text)
