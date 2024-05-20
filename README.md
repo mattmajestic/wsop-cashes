@@ -24,9 +24,9 @@ To see an example of this structure, review the following files in a basic web s
 
 ### JavaScript Example
 
-There a simple snowstorm.js in the `www` directory that is then enabled in `modules/wsop_ui.R` with `tags$head(tags$script(src = "snowstorm.js"))` that adds a snowfall effect to the page.  
+There is a simple snowstorm.js in the `www` directory that is then enabled in `modules/wsop_ui.R` with `tags$head(tags$script(src = "snowstorm.js"))` that adds a snowfall effect to the page via `JavaScript`.  
 
-To further interact with JS from R Shiny, `shinyjs` can be used to do an action like 
+To further interact with `JS` from R Shiny, `shinyjs` can be used to do an action like 
 
 ```
 observeEvent(input$stop_btn, {
