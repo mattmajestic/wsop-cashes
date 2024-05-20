@@ -16,8 +16,8 @@ R Shiny is an R framework for building web applications. One of the best practic
 
 To see an example of this structure, review the following files in a basic web scraping project for Poker Cashes across WSOP Circuits:
 
-- `ui.R`: Sources the wsopUI function to create the UI components.
-- `server.R`: Sources the wsopServer function to handle server logic.
+- `ui.R`: Sources the wsop_ui function to create the UI components.
+- `server.R`: Sources the wsop_server function to handle server logic.
 - `global.R`: loop through the modules directory to have the functions in R's global.
 - `modules/wsop_ui.R`: Defines the UI elements for the module.
 - `modules/wsop_server.R`: Implements the server-side logic for the module.
