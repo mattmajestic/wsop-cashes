@@ -2,3 +2,5 @@
 .Rhistory
 .RData
 .Ruserdata
+rsconnect/
+wsop-cashes.Rproj
